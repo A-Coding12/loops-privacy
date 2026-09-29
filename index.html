@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — LOOPS</title>
-<meta name="description" content="Privacy Policy for LOOPS, an offline puzzle game. No data is collected.">
+<meta name="description" content="Privacy Policy for LOOPS, a puzzle game. The developer collects no personal data; Huawei Ads Kit serves the advertising.">
 <style>
   :root{
     --ink:#101630; --body:#333a4d; --line:#e2e6f0; --bg:#ffffff;
@@ -78,19 +78,25 @@
 </header>
 
 <div class="callout">
-  <strong>Summary.</strong> LOOPS is a fully offline game. It collects no personal
-  data, has no account system, opens no network connections, and contains no
-  analytics, tracking, or advertising. Everything it stores stays on your own
-  device. This policy explains exactly what that means.
+  <strong>Summary.</strong> LOOPS has no account system and no servers of ours. The
+  developer collects no personal data, runs no analytics, and adds no tracking of
+  any kind. Everything the game stores stays on your own device. The one part of
+  the app that reaches the network is the advertising SDK — Huawei Ads Kit, which
+  serves an occasional interstitial and an optional rewarded hint. This policy
+  explains exactly what that means.
 </div>
 
 <h2>1. Information we collect</h2>
 <p>
   <strong>We collect nothing.</strong> LOOPS does not ask you to register, does not
-  request an email address or phone number, and does not create a profile. No
-  personal information, device identifiers, usage records, crash logs, or
-  analytics are collected, stored on our servers, or shared — because the app has
-  no servers.
+  request an email address or phone number, and does not create a profile. We
+  collect no personal information, no usage records, no crash logs and no
+  analytics, and we have no servers that could receive them.
+</p>
+<p>
+  The only component in the app that transmits anything at all is the
+  advertising SDK described in sections 4 to 6. It is operated by Huawei, not by
+  us, we have no access to what it handles, and none of it reaches us.
 </p>
 
 <h2>2. Data stored on your device</h2>
@@ -129,54 +135,75 @@
 
 <h2>3. Permissions</h2>
 <p>
-  Version 1.0.0 requests a single Android permission:
+  Version 1.0.0 requests the following Android permissions:
 </p>
 <ul>
   <li><strong>VIBRATE</strong> — used only for the optional haptic tap feedback.
   This is a normal permission: Android does not show a prompt for it, and it
   grants no access to any of your data.</li>
+  <li><strong>INTERNET, ACCESS_NETWORK_STATE, ACCESS_WIFI_STATE and
+  BROADCAST_STICKY</strong> — used by the advertising SDK to request an ad and to
+  learn whether one loaded. No game data travels on these connections.</li>
+  <li><strong>QUERY_ALL_PACKAGES</strong> and <strong>REQUEST_INSTALL_PACKAGES</strong>
+  — declared by Huawei's advertising SDK as part of its standard integration.
+  The game itself never reads your list of installed apps and never installs
+  anything.</li>
+  <li><strong>MANAGE_FOLD_SCREEN</strong> and <strong>MANAGE_FOLD_SCREEN_PRIVILEGED</strong>
+  — declared by the advertising SDK for Honor foldable devices; they give the
+  app nothing on other devices.</li>
+  <li>An app-scoped advertising component permission declared by the same SDK.</li>
 </ul>
 <p>
   The app does <strong>not</strong> request access to your contacts, storage,
-  photos, camera, microphone, location, device identifiers, or telephone
-  information.
+  photos, camera, microphone, location, or telephone information.
 </p>
 
 <h2>4. Network and data transmission</h2>
 <p>
-  LOOPS version 1.0.0 is offline by design. It does not include the
-  <code>INTERNET</code> permission, so it cannot make network requests at all.
-  Nothing you do in the game is uploaded, backed up to us, or made available to
-  anyone else. To move your progress to another device you would have to do so
-  yourself; there is no built-in sync.
+  The game itself is offline by design: nothing you do in the game — your
+  progress, your scores, your settings, your seed — is uploaded, backed up to
+  us, or made available to anyone else. To move your progress to another device
+  you would have to do so yourself; there is no built-in sync.
+</p>
+<p>
+  The app does include the <code>INTERNET</code> permission, and it serves one
+  purpose: the advertising SDK in section 6 fetching an ad and reporting back
+  that the ad was shown. No game data is attached to those requests, and none of
+  your progress is ever transmitted.
 </p>
 
 <h2>5. Third parties</h2>
 <p>
-  Version 1.0.0 contains no third-party software development kits. There is no
-  analytics, no crash reporting, no attribution or marketing SDK, and no social
-  login. The app does not share data with third parties, because it does not
-  have any to share.
+  Version 1.0.0 contains exactly one third-party software development kit:
+  <strong>Huawei Ads Kit</strong>, which provides the advertising in section 6.
+  There is no analytics SDK, no crash reporting, no attribution or marketing
+  SDK, and no social login. We do not share data with third parties, because the
+  game itself generates none to share.
 </p>
 
 <h2>6. Advertising</h2>
 <p>
-  <strong>This version contains no advertising.</strong> There are no ad
-  placements, no rewarded videos, and no advertising identifiers.
+  <strong>Version 1.0.0 contains advertising, served by Huawei Ads Kit.</strong>
+  You may see a full-screen ad occasionally between boards, and you can choose
+  to watch a rewarded ad in exchange for an extra hint. Both are optional — the
+  interstitial can always be closed and the rewarded ad is never required, so
+  nothing in the game is locked behind an ad.
 </p>
 <p>
-  If a future version of LOOPS introduces advertising, that version will use
-  Huawei Ads Kit and will be disclosed here and in the app store listing before
-  it is released. The current version and this policy contain no advertising
-  components.
+  The advertising SDK may request and use device and advertising identifiers in
+  order to deliver and measure ads. That is handled by Huawei's ad platform
+  under Huawei's own terms; the developer neither receives nor can access it,
+  and we wrote no advertising or analytics code of our own — ad delivery is
+  entirely the SDK's.
 </p>
 
 <h2>7. Children's privacy</h2>
 <p>
   LOOPS does not knowingly collect personal information from anyone, including
-  children under 13. Because the app collects no personal information at all,
-  no personal information from any user — of any age — is collected or
-  maintained.
+  children under 13. The developer collects no personal information from any
+  user — of any age — and keeps none. Advertising is handled entirely by Huawei
+  Ads Kit as described in section 6, and we have no access to anything it
+  processes.
 </p>
 
 <h2>8. Your choices and deleting your data</h2>
@@ -186,17 +213,22 @@
   <li><strong>Delete everything:</strong> uninstalling the app removes all data
   it stored, including the save, because it is held only in the app's private
   storage.</li>
-  <li><strong>Decline nothing:</strong> there are no permissions to deny beyond
-  the single VIBRATE permission, and no cookies, no tracking, and no
-  account to close.</li>
+  <li><strong>Limit advertising:</strong> you can reset or opt out of
+  personalised advertising using the Ads/Advertising ID controls in your
+  Android settings. This changes which ads you see and has no effect on the
+  game.</li>
+  <li><strong>Decline nothing else:</strong> VIBRATE is the only permission
+  Android lets you refuse in any meaningful way, and the game works with or
+  without it. There are no cookies, no account to close, and no tracking of
+  ours to switch off.</li>
 </ul>
 
 <h2>9. Security</h2>
 <p>
   Your progress is kept in the app's private storage, which Android isolates so
-  that other applications cannot read it. Since no data is transmitted over the
-  network, there is no transmission for us to secure, and we hold no copy of
-  your data.
+  that other applications cannot read it. The game never transmits it: none of
+  your play travels over the network, so there is nothing of ours to secure, and
+  we hold no copy of your data.
 </p>
 
 <h2>10. Changes to this policy</h2>
