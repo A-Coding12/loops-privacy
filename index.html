@@ -135,7 +135,9 @@
 
 <h2>3. Permissions</h2>
 <p>
-  Version 1.0.0 requests the following Android permissions:
+  Version 1.0.0 requests the following fifteen Android permissions. All of
+  them except the first come from the advertising SDK described in sections 4
+  to 6, not from the game:
 </p>
 <ul>
   <li><strong>VIBRATE</strong> — used only for the optional haptic tap feedback.
@@ -144,13 +146,23 @@
   <li><strong>INTERNET, ACCESS_NETWORK_STATE, ACCESS_WIFI_STATE and
   BROADCAST_STICKY</strong> — used by the advertising SDK to request an ad and to
   learn whether one loaded. No game data travels on these connections.</li>
-  <li><strong>QUERY_ALL_PACKAGES</strong> and <strong>REQUEST_INSTALL_PACKAGES</strong>
-  — declared by Huawei's advertising SDK as part of its standard integration.
-  The game itself never reads your list of installed apps and never installs
-  anything.</li>
+  <li><strong>QUERY_ALL_PACKAGES</strong> — declared by Huawei's advertising
+  SDK as part of its standard integration. The game itself never reads your
+  list of installed apps, and never installs anything.</li>
+  <li><strong>com.google.android.gms.permission.AD_ID</strong> — declared by the
+  same advertising SDK so that it can reach Google's advertising identifier on
+  devices that carry Google services. The game never reads that identifier
+  itself; the SDK does, for ad delivery only.</li>
   <li><strong>MANAGE_FOLD_SCREEN</strong> and <strong>MANAGE_FOLD_SCREEN_PRIVILEGED</strong>
   — declared by the advertising SDK for Honor foldable devices; they give the
   app nothing on other devices.</li>
+  <li><strong>com.huawei.permission.sec.ACCESS_UDID</strong>,
+  <strong>com.huawei.permission.sec.MDM.v2</strong>,
+  <strong>com.huawei.permission.app.DOWNLOAD</strong>,
+  <strong>com.hihonor.permission.sec.ACCESS_UDID</strong> and
+  <strong>com.hihonor.permission.sec.MDM.v2</strong> — all five declared by the
+  advertising SDK for its own device integration on Huawei and HONOR hardware.
+  The game makes no use of any of them, and none of them is chosen by us.</li>
   <li>An app-scoped advertising component permission declared by the same SDK.</li>
 </ul>
 <p>
